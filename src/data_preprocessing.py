@@ -50,7 +50,7 @@ def get_threshold(col_name: str) -> int | None:
         'C6H6(GT)': 5,          # True hourly averaged Benzene concentration in microg/m^3                          - EEA homepage
         'NOx(GT)': None,        # True hourly averaged NOx concentration in ppb                                     - No threshold defined yet
         'NO2(GT)': 10,          # True hourly averaged NO2 concentration in microg/m^3                              - WHO AQG page: 116
-        'PT08.S5(O3)': 60      # Hourly averaged sensor response (nominally O3 targeted)                           - WHO AQG page: 136
+        'PT08.S5(O3)': 60      # Hourly averaged sensor response (nominally O3 targeted)                            - WHO AQG page: 136
     }
     if col_name in thresholds:
         return thresholds[col_name]
@@ -75,6 +75,7 @@ def get_label(col_name: str) -> int | None:
         'T': 'Temperature (°C)',
         'RH': 'Relative Humidity (%)',
         'AH': 'Absolute Humidity',
+        'Month': 'Month',
         'HourOfDay': 'Hour of the day'
     }
     if col_name in labels:
